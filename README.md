@@ -24,7 +24,7 @@
    --url http://localhost:8050/api/v1/quizapp/auth/signup \
    --header 'Content-Type: application/json' \
    --data '{
- 	"username": "mercy.njer",
+ 	"username": "mercy.njeri",
  	"email": "mercy.njeri@gmail.com",
  	"role": "admin",
  	"password": "admin123"
