@@ -21,7 +21,7 @@
 
 #### Signup API
 `curl --request POST \
-   --url http://localhost:8050/api/v1/quizapp/api/auth/signup \
+   --url http://localhost:8050/api/v1/quizapp/auth/signup \
    --header 'Content-Type: application/json' \
    --data '{
  	"username": "mercy.njer",
@@ -32,7 +32,7 @@
  
  #### Signin API
  `curl --request POST \
-    --url http://localhost:8050/api/v1/quizapp/api/auth/signin \
+    --url http://localhost:8050/api/v1/quizapp/auth/signin \
     --header 'Content-Type: application/json' \
     --data '{
   	"username": "mercy.njeri",
