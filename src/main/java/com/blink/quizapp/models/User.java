@@ -24,7 +24,6 @@ public class User {
     @Email
     private String email;
 
-    @NotBlank
     @Size(max = 20)
     private String role;
 
