@@ -40,19 +40,6 @@ public class UserDetailsImpl implements UserDetails {
         this.authorities = authorities;
     }
 
-//    public static UserDetailsImpl build(User user) {
-//        List<GrantedAuthority> authorities = user.getRoles().stream()
-//                .map(role -> new SimpleGrantedAuthority(role.getName().name()))
-//                .collect(Collectors.toList());
-//
-//        return new UserDetailsImpl(
-//                user.getId(),
-//                user.getName(),
-//                user.getEmail(),
-//                user.getPassword(),
-//                authorities);
-//    }
-
     public UserDetailsImpl(User user) {
         this.mUser = user;
     }
@@ -60,7 +47,7 @@ public class UserDetailsImpl implements UserDetails {
     public UserDetailsImpl build() {
         List<GrantedAuthority> listAuthorities = new ArrayList<>();
         User user = mUser;
-        SimpleGrantedAuthority authority = new SimpleGrantedAuthority(user.getRole());
+        SimpleGrantedAuthority authority = new SimpleGrantedAuthority(user.getUsername());
         listAuthorities.add(authority);
 
         return new UserDetailsImpl(user.getId(), user.getUsername(), user.getEmail(), user.getRole(), user.getPassword(), listAuthorities);
